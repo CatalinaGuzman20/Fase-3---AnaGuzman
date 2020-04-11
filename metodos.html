@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <title>Ana Catalina Guzman - Fase 3 - Programación Orientada a Objetos - Métodos de ordenamiento</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Universidad Nacional Abierta y a Distancia">
+  <meta name="keywords" content="OVI, Fase3, UNAD">
+  <meta name="author" content="Ana Catalina Guzman">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <link rel="stylesheet" href="css/estilo.css">
+  <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no">
+</head>
+<body>
+  <header>    
+    <nav>
+      <ul>
+        <li class="activo"><a href= "index.html">Inicio</a></li>
+        <li ><a href= "objetivos.html">Objetivos del OVI</a></li>
+        <li ><a href= "programacion.html">Programación Orientada a Objetos</a></li>
+        <li ><a href= "metodos.html">Métodos de Ordenamiento</a></li>
+        <li ><a href= "videos.html">Vídeos explicativos</a></li>
+        <li ><a href= "contacto.html">Contacto</a></li>
+        <li><a href=  "twitter.html">Twitter UNAD</a></li>
+      </ul>
+    </nav>      
+  </header>
+  <section>
+
+	<h1>Métodos de Ordenamiento</h1>
+	<br>
+	<h2>Método de Ordenamiento: Burbuja</h2>
+	<br>
+	<p>El ordenamiento burbuja hace múltiples pasadas a lo largo de una lista. Compara los ítems adyacentes e intercambia los que no están en orden. Cada pasada a lo largo de la lista ubica el siguiente valor más grande en su lugar apropiado. En esencia, cada ítem “burbujea” hasta el lugar al que pertenece.</p>
+	<br>
+	<img src="https://runestone.academy/runestone/static/pythoned/_images/bubblepass.png" alt="">
+	<br>
+	<p>La Figura 1 muestra la primera pasada de un ordenamiento burbuja. Los ítems sombreados se comparan para ver si no están en orden. Si hay n ítems en la lista, entonces hay n−1 parejas de ítems que deben compararse en la primera pasada. Es importante tener en cuenta que, una vez que el valor más grande de la lista es parte de una pareja, éste avanzará continuamente hasta que la pasada se complete.</p>
+	<br>
+	<p>Al comienzo de la segunda pasada, el valor más grande ya está en su lugar. Quedan n−1 ítems por ordenar, lo que significa que habrá n−2 parejas. Puesto que cada pasada ubica al siguiente valor mayor en su lugar, el número total de pasadas necesarias será n−1. Después de completar la pasada n−1, el ítem más pequeño debe estar en la posición correcta sin requerir procesamiento adicional. El ActiveCode 1 muestra la función ordenamientoBurbuja completa. La función recibe la lista como un parámetro, y lo modifica intercambiando ítems según sea necesario.</p>
+	<br>
+	<p>La operación de intercambio es ligeramente diferente en Python que en la mayoría de los otros lenguajes de programación. Normalmente, el intercambio de dos ítems en una lista requiere una ubicación de almacenamiento temporal (una ubicación de memoria adicional). Un fragmento de código como</p>
+	<br>
+	<h1><textarea cols='80' rows='4' readonly>
+	temp = unaLista[i]
+	unaLista[i] = unaLista[j]
+	unaLista[j] = temp
+	</textarea></h1>	
+	<br>
+	<p>Intercambiará los ítems i-ésimo y j-ésimo de la lista. Sin el almacenamiento temporal, uno de los valores sería sobrescrito.</p>
+	<br>
+	<p>En Python es posible realizar la asignación simultánea. La instrucción a,b=b,a dará lugar a que se realicen dos instrucciones de asignación al mismo tiempo (véase la Figura 2). Usando la asignación simultánea, la operación de intercambio se puede hacer en una sola instrucción.</p>
+	<br>
+	<p>Las líneas 5-7 en el ActiveCode 1 realizan el intercambio de los ítems i-ésimo e (i+1)-ésimo utilizando el procedimiento de tres pasos descrito anteriormente. Note que también podríamos haber utilizado la asignación simultánea para intercambiar los ítems.</p>
+	<br>
+	<img src="https://runestone.academy/runestone/static/pythoned/_images/swap.png" alt="">
+	<br>
+	<h2>Método de Ordenamiento: Selección</h2>
+	<br>
+	<p>Algoritmo de ordenamiento por Selección (Selection Sort en inglés): Consiste en encontrar el menor de todos los elementos del arreglo o vector e intercambiarlo con el que está en la primera posición. Luego el segundo mas pequeño, y así sucesivamente hasta ordenarlo todo. Su implementación requiere O(n2) comparaciones e intercambios para ordenar una secuencia de elementos.</p>
+	<br>
+	<p>Este algoritmo mejora ligeramente el algoritmo de la burbuja. En el caso de tener que ordenar un vector de enteros, esta mejora no es muy sustancial, pero cuando hay que ordenar un vector de estructuras más complejas, la operación de intercambiar los elementos sería más costosa en este caso. Su funcionamiento se puede definir de forma general como:</p>
+	<br>
+	<p>Buscar el mínimo elemento entre una posición i y el final de la lista
+	Intercambiar el mínimo con el elemento de la posición i
+	Así, se puede escribir el siguiente pseudocódigo para ordenar una lista de n elementos indexados desde el 1:</p>
+	<br>
+
+	<h1><textarea cols='80' rows='11' readonly>
+	para i=1 hasta n-1;
+
+	minimo = i;
+	para j=i+1 hasta n	
+	si lista[j] < lista[minimo] entonces	
+	minimo = j
+	fin si
+	fin para
+	intercambiar(lista[i], lista[minimo])
+	fin para
+	</textarea></h1>	
+	<br>
+	<h2>Método de Ordenamiento: Inserción</h2>
+	<br>
+	<p>
+	Ordenamiento por Inserción: Supóngase que se desea ordenar los siguientes claves del arreglo (A) utilizando el método de inserción directa el cual consiste en insertar un elemento del arreglo en la parte izquierda del mismo que ya se encuentra ordenada. Este proceso se repite desde el segundo hasta el n-esimo elemento.</p>
+	<br>
+	<p>El algoritmo ordena los elementos del arreglo utlizando el método de inserción directa A es un arreglo de N elementos donde I, aux y k son variables de tipo entero</p>
+	<br>
+	<h1><textarea cols='90' rows='8' readonly>
+	1.- Repetir con I desde 2 hasta N Hacer aux<- A[I] y k<- I-1
+	a. Repetir mientras(aux < [k]) y (k > 1) , Hacer A[k+1]<- A[k] y k<-- k-1
+	b. {fin del ciclo del paso 1.1}
+	c. Si a[k]<=aux Entonces: Hacer A[k+1]<-aux
+	Si no Hacer A[k+1]<- A[k], A[k]<-A[k]
+	d. { fin del condicional del paso 1.3}
+	2. {fin del condicional del paso1}
+	</textarea></h1>			
+	<p>Ejemplo: </p>
+	<h1><textarea cols='80' rows='12' readonly>
+	function Insercion($arr){
+  	$count = count($arr);
+  	for($i=1; $i<$count; $i++)
+  	{
+    	$tmp = $arr[$i];
+    	for ($j=$i-1; $j>=0 && $arr[$j] > $tmp; $j--)
+     	$arr[$j+1] = $arr[$j];
+      	$arr[$j] = $tmp;
+  	}
+  	return $arr;
+	}	
+	</textarea></h1>
+  </section>
+  <footer>
+        <h6>Universidad Nacional Abierta y a Distancia - Diseño de Sitios Web - Elaborado por: Ana Catalina Guzman - Grupo: 301122_49</h6>
+        <a href="https://www.contadorvisitasgratis.com" title="contador de visitas"><img src="https://counter1.stat.ovh/private/contadorvisitasgratis.php?c=e7xkgcc4tmk3cqt5w136blmetbj3lz6h" border="0" title="contador de visitas" alt="contador de visitas"></a>
+   </footer>
+</body>
+</html>

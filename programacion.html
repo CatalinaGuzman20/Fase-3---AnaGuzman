@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <title>Ana Catalina Guzman - Fase 3 - Programación Orientada a Objetos - Métodos de ordenamiento</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Universidad Nacional Abierta y a Distancia">
+  <meta name="keywords" content="OVI, Fase3, UNAD">
+  <meta name="author" content="Ana Catalina Guzman">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <link rel="stylesheet" href="css/estilo.css">
+  <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no">
+</head>
+<body>
+  <header>    
+    <nav>
+      <ul>
+        <li ><a href= "index.html">Inicio</a></li>
+        <li ><a href= "objetivos.html">Objetivos del OVI</a></li>
+        <li class="activo"><a href= "programacion.html">Programación Orientada a Objetos</a></li>
+        <li ><a href= "metodos.html">Métodos de Ordenamiento</a></li>
+        <li ><a href= "videos.html">Vídeos explicativos</a></li>
+        <li ><a href= "contacto.html">Contacto</a></li>
+        <li><a href=  "twitter.html">Twitter UNAD</a></li>
+      </ul>
+    </nav>      
+  </header>
+  
+  <section>
+  	<h1>Programación Orientada a Objetos.</h1>
+  	<br>
+	<p>La programación Orientada a objetos se define como un paradigma de la programación, una manera de programar específica, donde se organiza el código en unidades denominadas clases, de las cuales se crean objetos que se relacionan entre sí para conseguir los objetivos de las aplicaciones.</p>
+    <br>
+    <p>La programación Orientada a objetos se define como un paradigma de la programación, una manera de programar específica, donde se organiza el código en unidades denominadas clases, de las cuales se crean objetos que se relacionan entre sí para conseguir los objetivos de las aplicaciones.</p>
+	<br>
+	<p>La programación Orientada a objetos (POO) es una forma especial de programar, más cercana a como expresaríamos las cosas en la vida real que otros tipos de programación.</p>
+	<br>
+	<h3><b>Cómo se piensa en objetos</b></h3>
+	<br>
+	<p>Pensar en términos de objetos es muy parecido a cómo lo haríamos en la vida real. Por ejemplo, vamos a pensar en un coche para tratar de modelizarlo en un esquema de POO. Diríamos que el coche es el elemento principal que tiene una serie de características, como podrían ser el color, el modelo o la marca. Además, tiene una serie de funcionalidades asociadas, como pueden ser ponerse en marcha, parar o aparcar.</p>
+	<br>
+	<p>Pues en un esquema POO "el coche" sería lo que se conoce como "Clase". Sus características, como el color o el modelo, serían propiedades y las funcionalidades asociadas, como ponerse en marcha o parar, serían métodos.</p>
+	<br>
+	<p>La clase es como un libro, que describe como son todos los objetos de un mismo tipo. La clase coche describe cómo son todos sus coches, qué propiedades tienen y qué funcionalidades deben poder realizar. A partir de una clase podemos crear cualquier número de objetos de esa clase. Un coche rojo que es de la marca Ford y modelo Fiesta, otro verde que es de la marca Seat y modelo Ibiza.</p>
+	<br>
+	<p>Por poner otro ejemplo vamos a ver cómo modelizaríamos en un esquema POO una fracción, es decir, esa estructura matemática que tiene un numerador y un denominador que divide al numerador, por ejemplo 3/2.</p>
+	<br>
+	<p>La fracción será la clase y tendrá dos propiedades, el numerador y el denominador. Luego podría tener varios métodos como simplificarse, sumarse con otra fracción o número, restarse con otra fracción, etc.</p>
+	<br>
+	<p>A partir de la definición de una fracción (la clase) podremos construir un número indeterminado de objetos de tipo fracción. Por ejemplo, podemos tener el objeto fracción 2/5 o 3/9, 4/3, etc. Todos esos son objetos de la clase fracción de números enteros.</p>
+	<br>
+	<p>Estas clases se podrán utilizar en los programas, por ejemplo, en un programa de matemáticas harás uso de la clase fracción y construirás muchos objetos de tipo fracción para hacer cuentas diversas. En un programa que gestione un taller de coches utilizarás la clase coche y se instanciarán diversos objetos de tipo coche para hacer las operativas.</p>
+	<br>
+	<p>En los lenguajes puramente orientados a objetos, tendremos únicamente clases y objetos. Las clases permitirán definir un número indeterminado de objetos, que colaboran entre ellos para resolver los problemas. Con muchos objetos de diferentes clases conseguiremos realizar las acciones que se desean implementar en la funcionalidad de la aplicación. Además, las propias aplicaciones como un todo, también serán definidas por medio de clases. Es decir, el taller de coches será una clase, de la que podremos crear el objeto taller de coches, que utilizará objetos coche, objetos de clase herramienta, objetos de clase mecánico, objetos de clase recambio, etc.</p>
+	<br>
+	<h2>Clases en POO</h2>
+	<br>
+	<p> Como habrás podido entender, las clases son declaraciones de objetos, también se podrían definir como abstracciones de objetos. Esto quiere decir que la definición de un objeto es la clase. Cuando programamos un objeto y definimos sus características y funcionalidades en realidad lo que estamos haciendo es programar una clase. En los ejemplos anteriores en realidad hablábamos de las clases coche o fracción porque sólo estuvimos definiendo, aunque por encima, sus formas.</p>
+	<br>
+	<h3>Propiedades en clases</h3>
+	<br>
+	<p> Las propiedades o atributos son las características de los objetos. Cuando definimos una propiedad normalmente especificamos su nombre y su tipo. Nos podemos hacer a la idea de que las propiedades son algo así como variables donde almacenamos datos relacionados con los objetos.</p>
+	<br>
+	<h3>Métodos en las clases</h3>
+	<br>
+	<p> Son las funcionalidades asociadas a los objetos. Cuando estamos programando las clases las llamamos métodos. Los métodos son como funciones que están asociadas a un objeto.</p>
+	<br>
+	<h2>Objetos en POO</h2>
+	<br>
+	<p> Los objetos son ejemplares de una clase cualquiera. Cuando creamos un ejemplar tenemos que especificar la clase a partir de la cual se creará. Esta acción de crear un objeto a partir de una clase se llama instanciar (que viene de una mala traducción de la palabra instace que en inglés significa ejemplar). Por ejemplo, un objeto de la clase fracción es por ejemplo 3/5. El concepto o definición de fracción sería la clase, pero cuando ya estamos hablando de una fracción en concreto 4/7, 8/1000 o cualquier otra, la llamamos objeto.</p>
+	<br>
+	<p> Para crear un objeto se tiene que escribir una instrucción especial que puede ser distinta dependiendo el lenguaje de programación que se emplee, pero será algo parecido a esto.</p>
+	<br>
+	<p> miCoche = new Coche()</p>
+	<br>
+	<p> Con la palabra "new" especificamos que se tiene que crear una instancia de la clase que sigue a continuación. Dentro de los paréntesis podríamos colocar parámetros con los que inicializar el objeto de la clase coche.</p>
+	<br>
+	<h3>Estados en objetos</h3>
+	<br>
+	<p> Cuando tenemos un objeto sus propiedades toman valores. Por ejemplo, cuando tenemos un coche la propiedad color tomará un valor en concreto, como por ejemplo rojo o gris metalizado. El valor concreto de una propiedad de un objeto se llama estado.</p>
+	<br>
+	<p> Para acceder a un estado de un objeto para ver su valor o cambiarlo se utiliza el operador punto.</p>
+	<br>
+	<p>miCoche.color = “rojo”</p>
+	<br>
+	<p> El objeto es miCoche, luego colocamos el operador punto y por último el nombre de la propiedad a la que deseamos acceder. En este ejemplo estamos cambiando el estado de la propiedad del objeto a "rojo" con una simple asignación.</p>
+	<br>
+	<h3>Mensajes en objetos</h3>
+	<br>
+	<p> Un mensaje en un objeto es la acción de efectuar una llamada a un método. Por ejemplo, cuando le decimos a un objeto coche que se ponga en marcha estamos pasándole el mensaje "ponte en marcha".</p>
+	<br>
+	<p> Para mandar mensajes a los objetos utilizamos el operador punto, seguido del método que deseamos invocar y los paréntesis, como en las llamadas a las funciones.</p>
+	<br>
+	<p> miCoche.ponerseEnMarcha()</p>
+	<br>
+	<p> En este ejemplo pasamos el mensaje "ponerseEnMarcha" al objeto "miCoche". Hay que colocar paréntesis igual que cualquier llamada a una función, dentro irían los parámetros, si es que el método los requiere.</p>
+  </section>
+
+  <footer>
+        <h6>Universidad Nacional Abierta y a Distancia - Diseño de Sitios Web - Elaborado por: Ana Catalina Guzman - Grupo: 301122_49</h6>
+        <a href="https://www.contadorvisitasgratis.com" title="contador de visitas"><img src="https://counter1.stat.ovh/private/contadorvisitasgratis.php?c=e7xkgcc4tmk3cqt5w136blmetbj3lz6h" border="0" title="contador de visitas" alt="contador de visitas"></a>
+  </footer>
+</body>
+</html>
